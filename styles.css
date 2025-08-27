@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#userCount{
+    border-radius: 25px;
+    text-align: center;
+}
+
+.table {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+th, td {
+    vertical-align: middle;
+    padding: 12px;
+}
+
+th.rounded-pill {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.form-select {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+#userCount::placeholder {
+  text-align: center;
+}
+
