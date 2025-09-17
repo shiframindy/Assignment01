@@ -14,7 +14,7 @@ function getUsers() {
         return;
     }
 
-    fetch("https://randomuser.me/api/?results=" + count + "&inc=name,gender,email,location,phone,cell,dob,picture&noinfo")
+    fetch(`http://localhost:3000/api?results=${count}`)
         .then(res => res.json())
         .then(data => {
             users = data.results;
@@ -24,18 +24,19 @@ function getUsers() {
             errorEl.textContent = 'Failed to fetch users. Please try again later.';
         });
   }
+
 function showUsers() {
             const tableBody = document.getElementById("userTable");
             const nameType = document.getElementById("nameSelect").value;
 
             tableBody.innerHTML = users.map((user, index) => `
-        <tr ondblclick="openUserModal(${index})">
-            <td>${user.name[nameType]}</td>
-            <td>${user.gender}</td>
-            <td>${user.email}</td>
-            <td>${user.location.country}</td>
-        </tr>
-    `).join("");
+                <tr ondblclick="openUserModal(${index})">
+                    <td>${user.name[nameType]}</td>
+                    <td>${user.gender}</td>
+                    <td>${user.email}</td>
+                    <td>${user.location.country}</td>
+                </tr>
+            `).join("");
 }
 
 function openUserModal(index) {
